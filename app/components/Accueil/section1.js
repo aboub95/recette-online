@@ -22,7 +22,7 @@ export default function Section1() {
       </h1>
 
       {/* Conteneur des cartes */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-5 mt-10">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 p-5 mt-10">
         {images.map((image, index) => (
           <div
             className="rounded-xl bg-slate-200 shadow-lg hover:shadow-xl transition-shadow"
@@ -50,7 +50,7 @@ export default function Section1() {
 
       {/* Bouton Voir Plus */}
       <div className="flex justify-center mt-10">
-        <Link href="/recettes">
+        <Link href="/">
           <button className="px-6 py-3 bg-orange-500 text-white text-lg font-semibold rounded-full hover:bg-orange-600 transition">
             Voir toutes les recettes
           </button>

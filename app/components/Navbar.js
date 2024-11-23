@@ -1,7 +1,11 @@
+"use client";
+import { useState } from "react";
+
 import Link from "next/link";
 import Image from "next/image";
 
 export default function Nav() {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div>
       <nav className="h-24 w-full bg-black  top-0 flex justify-between items-center px-5 z-10">
@@ -18,22 +22,22 @@ export default function Nav() {
         </div>
 
         <div className="hidden md:flex justify-around items-center h-20 w-8/12 bg-black">
-          <Link href="/about">
+          <Link href="/">
             <ul className="mr-5 hover:text-gray-300 text-white text-lg md:text-xl lg:text-2xl">
               Accueil
             </ul>
           </Link>
-          <Link href="/about">
+          <Link href="/">
             <ul className="mr-5 hover:text-gray-300 text-white text-lg md:text-xl lg:text-2xl">
               Recettes
             </ul>
           </Link>
-          <Link href="/about">
+          <Link href="/app/Menu">
             <ul className="mr-5 hover:text-gray-300 text-white text-lg md:text-xl lg:text-2xl">
               Menu
             </ul>
           </Link>
-          <Link href="/about">
+          <Link href="/">
             <ul className="mr-5 hover:text-gray-300 text-white text-lg md:text-xl lg:text-2xl">
               Contact
             </ul>
@@ -49,7 +53,10 @@ export default function Nav() {
 
         {/* Mobile Menu (hamburger) */}
         <div className="md:hidden flex items-center">
-          <button className="text-white focus:outline-none">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="text-white focus:outline-none"
+          >
             {/* Beurgeur */}
             <svg
               className="w-8 h-8"
@@ -70,20 +77,31 @@ export default function Nav() {
       </nav>
 
       {/* Menu beurgeur pour le mobile */}
-      <div className="md:hidden bg-black text-white p-5">
-        <Link href="/about">
-          <ul className="mb-4 hover:text-gray-300 text-lg">Accueil</ul>
-        </Link>
-        <Link href="/about">
-          <ul className="mb-4 hover:text-gray-300 text-lg">Recettes</ul>
-        </Link>
-        <Link href="/about">
-          <ul className="mb-4 hover:text-gray-300 text-lg">Menu</ul>
-        </Link>
-        <Link href="/about">
-          <ul className="hover:text-gray-300 text-lg">Contact</ul>
-        </Link>
-      </div>
+
+      {isOpen && (
+        <div className="md:hidden bg-black text-white p-5">
+          <Link href="/about">
+            <ul className="mb-4 hover:bg-cyan-600  hover:scale-105 transition duration-150text-gray-300 text-lg">
+              Accueil
+            </ul>
+          </Link>
+          <Link href="/about">
+            <ul className="mb-4 hover:bg-cyan-600  hover:scale-105 transition duration-150 text-gray-300 text-lg">
+              Recettes
+            </ul>
+          </Link>
+          <Link href="/about">
+            <ul className="mb-4  hover:bg-cyan-600  hover:scale-105 transition duration-150text-gray-300 text-lg">
+              Menu
+            </ul>
+          </Link>
+          <Link href="/about">
+            <ul className=" hover:bg-cyan-600  hover:scale-105 transition duration-150text-gray-300 text-lg">
+              Contact
+            </ul>
+          </Link>
+        </div>
+      )}
     </div>
   );
 }
