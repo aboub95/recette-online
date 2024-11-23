@@ -18,9 +18,9 @@ export default function Section3() {
       </p>
 
       {/* Bouton "Voir plus" */}
-      <Link href="/Menu">
+      <Link href="/inscription">
         <button className="bg-orange-500 text-white py-3 px-8 text-lg md:text-xl lg:text-2xl rounded-3xl hover:bg-orange-600 transition">
-          Voir plus
+          Ajouter voter recettes
         </button>
       </Link>
     </section>

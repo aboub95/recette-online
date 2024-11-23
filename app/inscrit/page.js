@@ -1,12 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
-import Nav from "../components/Navbar";
-import Footer from "../components/Accueil/Footer";
+// import Nav from "../components/Navbar";
+// import Footer from "../components/Accueil/Footer";
 
 export default function Inscription() {
   return (
     <div>
-      <Nav />
+      {/* <Nav /> */}
       <div className="flex flex-col md:flex-row justify-center items-center h-auto md:h-[600px] px-4">
         <Image
           src="/cuissine/chef cuisto.jpg"
@@ -63,7 +63,7 @@ export default function Inscription() {
           </form>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function Section1() {
-  // Tableau contenant les chemins des images
   const images = [
     "/cuissine/frite.jpg",
     "/cuissine/plat4.jpg",
@@ -16,12 +15,10 @@ export default function Section1() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Titre */}
       <h1 className="text-center text-3xl font-bold mt-10">
         Nos Recettes du jour
       </h1>
 
-      {/* Conteneur des cartes */}
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 p-5 mt-10">
         {images.map((image, index) => (
           <div
@@ -31,7 +28,7 @@ export default function Section1() {
             <Link href={`/recette/${index + 1}`}>
               <div className="overflow-hidden rounded-t-xl">
                 <Image
-                  src={image} // On utilise l'image actuelle du tableau
+                  src={image}
                   alt={`Recette ${index + 1}`}
                   width={2000}
                   height={2000}
@@ -48,7 +45,6 @@ export default function Section1() {
         ))}
       </div>
 
-      {/* Bouton Voir Plus */}
       <div className="flex justify-center mt-10">
         <Link href="/">
           <button className="px-6 py-3 bg-orange-500 text-white text-lg font-semibold rounded-full hover:bg-orange-600 transition">
