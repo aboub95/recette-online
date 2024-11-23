@@ -22,7 +22,7 @@ export default function Accueil() {
             placeholder="Trouver votre recette..."
             className="h-10 w-72 max-sm:w-48 rounded-2xl pl-7 mr-5 mt-5 border border-cyan-500 focus:border-cyan-400 outline-none"
           />
-          <Link href="/about">
+          <Link href="/Menu">
             <button className="mt-5  bg-cyan-600 text-white text-lg md:text-xl w-40 max-sm:w-32 h-10 rounded-2xl hover:bg-orange-600 transition">
               Rechercher
             </button>

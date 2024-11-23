@@ -1,15 +1,20 @@
 import { people } from "../data";
 import { getImageUrl } from "../utils";
 import Image from "next/image";
+import Nav from "../components/Navbar";
+import Footer from "../components/Accueil/Footer";
 
 export default function RecetteList() {
   return (
     <div className="w-full flex flex-col">
-        <div className="m-auto flex flex-col items-center">
-         <h1 className="font-bold md:mt-10 mt-6 md:text-4xl text-2xl">Résultat de la recherche</h1>
-         <div className="md:w-[380px] w-[250px] h-2 bg-[#F89249]"></div>
-        </div>
-      <div className="grid grid-cols-2 md:mt-8 mt-6 md:grid-cols-4 md:gap-5 gap-3 md:w-[90%] max-sm:px-4 m-auto items-center">
+      <Nav />
+      <div className="m-auto flex flex-col items-center">
+        <h1 className="font-bold md:mt-10 mt-6 md:text-4xl text-2xl">
+          Résultat de la recherche
+        </h1>
+        <div className="md:w-[380px] w-[250px] h-2 bg-[#F89249]"></div>
+      </div>
+      <div className="grid grid-cols-2 md:mt-8 mt-6 md:grid-cols-4 mb-10 md:gap-5 gap-3 md:w-[90%] max-sm:px-4 m-auto items-center">
         {people.map((person) => (
           <div key={person.id} className="recette-card">
             <div
@@ -33,6 +38,7 @@ export default function RecetteList() {
           </div>
         ))}
       </div>
+      <Footer />
     </div>
   );
 }

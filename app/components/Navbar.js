@@ -27,12 +27,12 @@ export default function Nav() {
               Accueil
             </ul>
           </Link>
-          <Link href="/">
+          <Link href="/recette">
             <ul className="mr-5 hover:text-gray-300 text-white text-lg md:text-xl lg:text-2xl">
               Recettes
             </ul>
           </Link>
-          <Link href="/app/Menu">
+          <Link href="/Menu">
             <ul className="mr-5 hover:text-gray-300 text-white text-lg md:text-xl lg:text-2xl">
               Menu
             </ul>
@@ -45,7 +45,7 @@ export default function Nav() {
         </div>
 
         {/* Connexion Button */}
-        <Link href="/about">
+        <Link href="/Connexion">
           <button className="hidden md:block mr-5 hover:text-gray-300 text-white bg-orange-500 h-12 md:h-14 w-28 md:w-36 text-lg md:text-xl lg:text-2xl rounded-3xl">
             Connexion
           </button>
@@ -80,7 +80,7 @@ export default function Nav() {
 
       {isOpen && (
         <div className="md:hidden bg-black text-white p-5">
-          <Link href="/about">
+          <Link href="/">
             <ul className="mb-4 hover:bg-cyan-600  hover:scale-105 transition duration-150text-gray-300 text-lg">
               Accueil
             </ul>
@@ -90,12 +90,12 @@ export default function Nav() {
               Recettes
             </ul>
           </Link>
-          <Link href="/about">
+          <Link href="/Menu">
             <ul className="mb-4  hover:bg-cyan-600  hover:scale-105 transition duration-150text-gray-300 text-lg">
               Menu
             </ul>
           </Link>
-          <Link href="/about">
+          <Link href="/inscription">
             <ul className=" hover:bg-cyan-600  hover:scale-105 transition duration-150text-gray-300 text-lg">
               Contact
             </ul>
