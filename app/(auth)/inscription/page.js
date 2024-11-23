@@ -7,7 +7,7 @@ export default function inscription() {
   return (
     <div className="w-full h-screen">
       <Nav />
-      <div className="flex w-[90%] md:gap-16 gap-8 flex-col m-auto">
+      <div className="flex w-[90%] md:gap-12 mb-5 gap-8 flex-col m-auto">
         <div></div>
         <div className="flex max-sm:flex-col m-auto items-center md:pl-20 w-full">
           <div className="bg-[#F89249] py-2 ">
