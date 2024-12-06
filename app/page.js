@@ -6,7 +6,6 @@ import Section1 from "./components/Accueil/section1";
 import Section2 from "./components/Accueil/section2";
 import Section3 from "./components/Accueil/section3";
 import Footer from "./components/Accueil/Footer";
-import { Publier } from "./components/Publication/Publier";
 
 export default function page() {
   return (
@@ -17,7 +16,6 @@ export default function page() {
       <Section2 />
       <Section3 />
       <Footer />
-      {/* <Publier /> */}
     </>
   );
 }

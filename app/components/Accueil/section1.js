@@ -32,7 +32,7 @@ export default function Section1() {
                   alt={`Recette ${index + 1}`}
                   width={2000}
                   height={2000}
-                  className="w-full h-96 hover:scale-110 transition duration-700"
+                  className="w-full h-96 max-sm:h-40 hover:scale-110 transition duration-700"
                 />
               </div>
               <div className="p-4 text-center">

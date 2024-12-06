@@ -1,7 +1,7 @@
 export function Video3() {
   return (
     <video
-      className="rounded-lg w-full h-auto"
+      className="rounded-lg w-full h-auto "
       width="320"
       height="240"
       autoPlay

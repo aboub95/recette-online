@@ -18,7 +18,7 @@ export default function Section2() {
         </div>
 
         {/* Vidéo 2 */}
-        <div className="rounded-lg bg-gray-100 shadow-lg p-4">
+        <div className="rounded-lg bg-gray-100 shadow-lg p-4 w-full">
           <Video2 />
           <p className="mt-4 text-center text-lg font-semibold">
             Dessert gourmand

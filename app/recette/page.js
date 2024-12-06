@@ -21,7 +21,7 @@ export default function RecetteList() {
               className="flex flex-col gap-4 bg-[#CCCCCC] rounded-lg pb-4 px-1 pt-1 items-center 
   shadow-md hover:shadow-2xl hover:scale-105 transition-transform duration-300 ease-in-out"
             >
-              <div className="gap-3 flex items-center flex-col">
+              <div className="gap-3 flex items-center flex-col max-sm:h-48">
                 <Image
                   src={getImageUrl(person)}
                   alt={person.name}
@@ -29,9 +29,9 @@ export default function RecetteList() {
                   height={200}
                   className="w-full "
                 />
-                <h3>{person.name}</h3>
+                <h3 className="max-sm:hidden">{person.name}</h3>
               </div>
-              <button className="bg-[#F89249] pl-1 px-2 rounded-lg text-white hover:bg-[#da8448]">
+              <button className="bg-[#F89249] pl-1 px-2 rounded-lg text-white max-sm:mt-3 hover:bg-[#da8448]">
                 {person.button}
               </button>
             </div>

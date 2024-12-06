@@ -3,7 +3,7 @@ import Image from "next/image";
 import Nav from "../components/Navbar";
 import Footer from "../components/Accueil/Footer";
 
-// Exemple de tableau d'images. Remplacez les URLs par vos vraies images.
+//Je mettrai les liens des pour mes images.
 const images = [
   "/cuissine/m1.jpg",
   "/cuissine/m2.jpg",
@@ -39,7 +39,7 @@ export default function Menu() {
             <Link href={`/recette/${index + 1}`}>
               <div className="overflow-hidden rounded-t-xl">
                 <Image
-                  src={image} // On utilise l'image actuelle du tableau
+                  src={image} // Je vais utilise l'image actuelle du tableau ici
                   alt={`Recette ${index + 1}`}
                   width={600}
                   height={400}

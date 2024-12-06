@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export function Inscrit() {
   const [name, setName] = useState("");
@@ -16,7 +17,9 @@ export function Inscrit() {
     e.preventDefault();
 
     if (!email.includes("@") || password.length < 6) {
-      setMessage("Email invalide ou mot de passe trop court (min. 6 caractères).");
+      setMessage(
+        "Email invalide ou mot de passe trop court (min. 6 caractères)."
+      );
       return;
     }
 
@@ -61,7 +64,9 @@ export function Inscrit() {
           className="shadow-lg py-8 px-8 flex flex-col border border-[#F89249] max-sm:w-full gap-6"
         >
           <div className="flex flex-col items-center mb-3">
-            <h1 className="font-bold md:text-2xl text-xl">Bienvenue sur Formulaire</h1>
+            <h1 className="font-bold md:text-2xl text-xl">
+              Bienvenue sur Formulaire
+            </h1>
             <h1 className="font-bold text-2xl">D’intégration</h1>
           </div>
           {message && <p className="text-red-500">{message}</p>}
@@ -105,16 +110,21 @@ export function Inscrit() {
               className="border border-[#F89249] pl-3"
             />
           </div>
-          <div className="m-auto">
+          <div className="flex justify-around items-center gap-5 m-auto">
             <button
               type="submit"
-              className={`text-base px-4 rounded-lg text-white ${
-                loading ? "bg-gray-500" : "bg-[#F89249]"
+              className={`text-base px-4 rounded-2xl h-10 w-40 text-white hover:scale-125 transition duration-100 hover:bg-cyan-700 ${
+                loading ? "bg-gray-500" : "bg-orange-500"
               }`}
               disabled={loading}
             >
-              {loading ? "Chargement..." : "Inscrire"}
+              {loading ? "Chargement..." : "S'inscrire"}
             </button>
+            <Link href="/">
+              <button className="  bg-orange-500 text-white text-lg md:text-xl w-40 max-sm:w-32 h-10 rounded-2xl hover:bg-cyan-700 hover:scale-125 transition duration-100">
+                Retour
+              </button>
+            </Link>
           </div>
         </form>
       </div>

@@ -37,14 +37,13 @@ export default function Nav() {
               Menu
             </ul>
           </Link>
-          <Link href="/">
+          <Link href="/inscription">
             <ul className="mr-5 hover:text-gray-300 text-white text-lg md:text-xl lg:text-2xl">
               Contact
             </ul>
           </Link>
         </div>
 
-        {/* Connexion Button */}
         <Link href="/Connexion">
           <button className="hidden md:block mr-5 hover:text-gray-300 text-white bg-orange-500 h-12 md:h-14 w-28 md:w-36 text-lg md:text-xl lg:text-2xl rounded-3xl">
             Connexion
@@ -57,7 +56,7 @@ export default function Nav() {
             onClick={() => setIsOpen(!isOpen)}
             className="text-white focus:outline-none"
           >
-            {/* Beurgeur */}
+            {/* L'icon de mon menbu beurgeur */}
             <svg
               className="w-8 h-8"
               fill="none"
@@ -76,7 +75,7 @@ export default function Nav() {
         </div>
       </nav>
 
-      {/* Menu beurgeur pour le mobile */}
+      {/* J'appelle mon Menu beurgeur ici pour la version mobile */}
 
       {isOpen && (
         <div className="md:hidden bg-black text-white p-5">
@@ -85,7 +84,7 @@ export default function Nav() {
               Accueil
             </ul>
           </Link>
-          <Link href="/about">
+          <Link href="/recette">
             <ul className="mb-4 hover:bg-cyan-600  hover:scale-105 transition duration-150 text-gray-300 text-lg">
               Recettes
             </ul>
